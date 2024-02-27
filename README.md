@@ -229,11 +229,11 @@ ___按需调整即可___
 
 . /etc/profile
 
-LOG_PATH="/opt/app/python-yw-ops/"
+LOG_PATH=[project_home]
 
 delete_log (){
     # 删除7天前的日志
-    su - operations -c "find ${LOG_PATH} -mtime +7 -type f | grep \"_service/logs/\" | grep -E \"\.(log|txt).*\" | xargs -I {} rm -rf {}"
+    su - [deploy_user] -c "find ${LOG_PATH} -mtime +7 -type f | grep \"_service/logs/\" | grep -E \"\.(log|txt).*\" | xargs -I {} rm -rf {}"
 }
 
 delete_log
