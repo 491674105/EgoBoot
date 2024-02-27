@@ -1,0 +1,2 @@
+nacos_service/base/settings.py merge=ours
+env.py merge=ours

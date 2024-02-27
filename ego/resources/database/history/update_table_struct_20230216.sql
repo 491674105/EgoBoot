@@ -1,0 +1,1 @@
+alter table ops_sql_exec_plan add env char(16) not null comment '所属环境' after exec_time;

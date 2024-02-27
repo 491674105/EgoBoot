@@ -1,0 +1,92 @@
+## flask相关依赖
+# flask基础包
+Flask==3.0.0
+# flask调试组件
+Flask-DebugToolbar==0.13.1
+# APScheduler支持
+Flask-APScheduler==1.12.4
+# webassets支持
+Flask-Assets==2.1.0
+# SQLAlchemy支持
+Flask-SQLAlchemy==3.1.1
+# SQL语法支持
+flask-sqlacodegen==2.0.0
+
+# 过时标记
+Deprecated==1.2.14
+
+# 任务调度
+APScheduler==3.10.1
+
+## 数据库驱动
+# python原生mysql驱动
+#pymysql==1.0.2
+# mysql驱动，C语言版
+mysqlclient==2.1.1
+
+# ORM支持
+SQLAlchemy==2.0.22
+
+# python-http依赖
+requests==2.28.0
+
+# yaml处理框架
+pyyaml==6.0
+
+# Nacos-SDK
+nacos-sdk-python==0.1.7
+
+# Python WSGI 服务器相关
+Werkzeug==3.0.1
+
+# gevent
+greenlet==3.0.1
+gevent==23.9.1
+
+# Python 测试库
+hypothesis==6.43.3
+
+# 打包依赖
+pyinstaller==4.10
+
+# 加密解密库
+rsa==4.8
+
+#jenkins
+python-jenkins==1.7.0
+
+# redis
+redis==4.5.4
+redis-om==0.0.27
+
+# gitlab
+python-gitlab==3.14.0
+
+# rabbitmq - pika
+pika==1.3.0
+# rabbitmq - pika - asyncio
+aio-pika==8.1.0
+
+# ssh依赖
+paramiko==2.12.0
+
+# SCP
+scp==0.14.4
+
+# 序列化工具(serialization)，用于替换python内置pickle模块
+dill==0.3.5.1
+
+# SQL解析
+sqlparse==0.4.4
+
+# 系统进程监控工具
+psutil==5.9.4
+
+# 中国节假日
+chinesecalendar==1.9.0
+
+# Excel处理
+openpyxl==3.1.2
+
+# 读写锁
+readerwriterlock==1.0.9

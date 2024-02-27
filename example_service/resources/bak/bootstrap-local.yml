@@ -1,0 +1,45 @@
+flask:
+  application:
+    name: example
+  original:
+    JSON_AS_ASCII: false
+    SQLALCHEMY_TRACK_MODIFICATIONS: false
+    SQLALCHEMY_POOL_RECYCLE: 300
+    SQLALCHEMY_DATABASE_URI: "mysql+pymysql://uuuuuu:ppppppp@127.0.0.1:3306/dddddddd?charset=utf8"
+  root_path: /exampleapi
+  filter_path: /filter
+  interceptor_path: /interceptor
+  cert: /cert
+  json_encoder: ego.utils.JSONEncoder
+  cloud:
+    nacos:
+      cluster_name: DEFAULT
+      name: example-api
+      reporting_interval: 5
+      profile:
+        dev: 127.0.0.1
+        test: local
+        prod: local
+    refresh_subscribe: 30
+    routes:
+      - name: yyyy
+        static:
+          ip: 127.0.0.1
+          port: NNNN
+      - name: xxxx
+  timezone: Asia/Shanghai
+  logger:
+    level: DEBUG
+    output_file: flask.log
+    encoding: UTF-8
+    fmt: '%(asctime)s.%(msecs)03d %(levelname)s [%(service_port)s] [%(thread)d] [%(threadName)s] [%(uri)s] [%(relate_path)s.%(funcName)s:%(lineno)s] - %(message)s '
+    datefmt: '%Y-%m-%d %H:%M:%S'
+  gitlab_url: http://127.0.0.1/
+  gitlab_private_token: xxxxxxxx
+
+info:
+  name: 运维资产管理平台
+  version: 1.0
+
+server:
+  port: NNNNN

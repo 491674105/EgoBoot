@@ -1,0 +1,14 @@
+flask:
+  application:
+    name: yw_scheduler
+  cloud:
+    nacos:
+      config: yw_scheduler.yml
+      group: DEFAULT_GROUP
+
+info:
+  name: 运维资产管理平台
+  version: 1.0
+
+server:
+  port: 8886

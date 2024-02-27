@@ -1,0 +1,14 @@
+flask:
+  application:
+    name: example
+  cloud:
+    nacos:
+      config: example.yml
+      group: DEFAULT_GROUP
+
+info:
+  name: 运维资产管理平台
+  version: 1.0
+
+server:
+  port: NNNNN

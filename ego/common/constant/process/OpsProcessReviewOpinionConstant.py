@@ -1,0 +1,2 @@
+PASSED = "agree"
+REFUSED = "refuse"
