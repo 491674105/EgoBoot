@@ -45,7 +45,7 @@ python3 starter.py -s [service_name]
 
 ```
 .
-|---- core                       核心包
+|---- ego                        核心包
 |---- |---- flask_core           Flask核心封装
 |---- |---- common
 |---- |---- |---- constant       常量
@@ -65,8 +65,8 @@ python3 starter.py -s [service_name]
 |---- |---- network              网络模块
 |---- |---- utils                工具类
 |---- |---- resources            公用资源
-|---- |---- nacos_core           nacos-sdk封装
-
+|---- nacos_service              nacos-sdk封装
+|---- scheduler_service          调度服务封装
 |---- [service_name]_service     服务包
 |---- |---- dispatch             服务调度器
 |---- |---- filter               服务自定义过滤器
