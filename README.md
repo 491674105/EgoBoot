@@ -1,7 +1,3 @@
-# 运维平台 
-
-## python-yw-ops
-
 ## 创建虚拟环境
 
 **_建议使用，避免与系统默认的 python-lib 发生冲突，同时，尽可能保证当前项目的 lib 为清洁环境。_**
@@ -45,7 +41,7 @@ python3 starter.py -s [service_name]
 
 ```
 .
-|---- core                       核心包
+|---- ego                        核心包
 |---- |---- flask_core           Flask核心封装
 |---- |---- common
 |---- |---- |---- constant       常量
@@ -65,8 +61,8 @@ python3 starter.py -s [service_name]
 |---- |---- network              网络模块
 |---- |---- utils                工具类
 |---- |---- resources            公用资源
-|---- |---- nacos_core           nacos-sdk封装
-
+|---- nacos_service              nacos-sdk封装
+|---- scheduler_service          调度服务封装
 |---- [service_name]_service     服务包
 |---- |---- dispatch             服务调度器
 |---- |---- filter               服务自定义过滤器
@@ -229,11 +225,11 @@ ___按需调整即可___
 
 . /etc/profile
 
-LOG_PATH="/opt/app/python-yw-ops/"
+LOG_PATH=[project_home]
 
 delete_log (){
     # 删除7天前的日志
-    su - operations -c "find ${LOG_PATH} -mtime +7 -type f | grep \"_service/logs/\" | grep -E \"\.(log|txt).*\" | xargs -I {} rm -rf {}"
+    su - [deploy_user] -c "find ${LOG_PATH} -mtime +7 -type f | grep \"_service/logs/\" | grep -E \"\.(log|txt).*\" | xargs -I {} rm -rf {}"
 }
 
 delete_log
